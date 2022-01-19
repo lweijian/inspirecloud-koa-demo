@@ -12,7 +12,7 @@
 
 要在请求头携带token，不然会有这个错误。
 
-![image-20220118154837687](C:\Users\123\AppData\Roaming\Typora\typora-user-images\image-20220118154837687.png)
+![image](https://user-images.githubusercontent.com/63062575/150188765-a129e4ad-7a46-46e0-958a-f1f727ef4186.png)
 
 如果通过 @byteinspire/js-sdk JavaScript SDK 请求**云函数**，会自动设置 **token**。所以，如果是
 
@@ -101,17 +101,17 @@ ctx.body = {result};
 
 所以本地环境测试需要获取轻服务注入的凭证，并手动配置环境。不然会导致jest测试报错，会有下面的错误。
 
-![image-20220118172116569](C:\Users\123\AppData\Roaming\Typora\typora-user-images\image-20220118172116569.png)
+![image](https://user-images.githubusercontent.com/63062575/150188832-8177fa8d-a64a-44ed-b269-194510738129.png)
 
 
 
 可以通过运行时，打印一下环境变量 
+![image](https://user-images.githubusercontent.com/63062575/150188924-cd087394-5995-4b5b-9b2d-59c960c43ad9.png)
 
-![image-20220120011817448](C:\Users\123\AppData\Roaming\Typora\typora-user-images\image-20220120011817448.png)
 
 获取 这三个字段的变量与值，然后通过cross-env配置测试环境的环境变量
 
-![image-20220120012737093](C:\Users\123\AppData\Roaming\Typora\typora-user-images\image-20220120012737093.png)
+![image](https://user-images.githubusercontent.com/63062575/150188868-d5817e33-9328-4a79-8d47-47fc8d72363a.png)
 
 这三个变量是轻服务注入的，不要暴露给其他人
 
