@@ -8,7 +8,7 @@ const fs = require("fs");
  */
 class fileController {
     async upload(ctx) {
-        // 从请求参数中获取文件，请求 Content-Type 需要为 multipart/form-data
+        // 请求 Content-Type 需要为 multipart/form-data
         const { file } = ctx.request.files;
         const buffer = fs.readFileSync(file.path);
         const result = await fileService.upload(ctx,{name:file.name,buffer})
