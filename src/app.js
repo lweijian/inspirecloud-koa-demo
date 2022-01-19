@@ -34,7 +34,7 @@ app.use(async function errorHandler(ctx, next) {
         ctx.body = {error: err.message};
     }
 });
-console.log(process.env)
+
 app.use(router.routes());
 app.use(router.allowedMethods());
 

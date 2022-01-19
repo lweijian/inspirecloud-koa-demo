@@ -6,7 +6,7 @@ const fs = require("fs");
  * Controller 是业务入口，由 HTTP 路由解析后调用
  * 用户信息的增删改查、登录注册功能
  */
-class fileController {
+class FileController {
     async upload(ctx) {
         // 请求 Content-Type 需要为 multipart/form-data
         const { file } = ctx.request.files;
@@ -23,4 +23,4 @@ class fileController {
 }
 
 // 导出 Controller 的实例
-module.exports = new fileController();
+module.exports = new FileController();
