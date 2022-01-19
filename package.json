@@ -1,0 +1,31 @@
+{
+  "name": "@byteinspire-template/koa",
+  "version": "0.0.5",
+  "files": [
+    "*",
+    "!.*",
+    ".gitignore"
+  ],
+  "dependencies": {
+    "@byteinspire/api": "^1.0.12",
+    "@koa/router": "^8.0.2",
+    "axios": "^0.25.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
+    "koa-static": "^5.0.0",
+    "uuid": "^8.3.2"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {},
+  "license": "ISC",
+  "scripts": {
+    "dev-test": "cross-env  INSPIRECLOUD_API_ENDPOINT= INSPIRECLOUD_SERVICE_ID=  INSPIRECLOUD_SERVICE_SECRET= jest "
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.4.7"
+  }
+}
