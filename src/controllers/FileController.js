@@ -10,7 +10,7 @@ class FileController {
     async upload(ctx) {
         // 请求 Content-Type 需要为 multipart/form-data
         const { file } = ctx.request.files;
-        const buffer = fs.readFileSync(file.path);
+        const buffer = fs.createReadStream(file.path);
         const result = await fileService.upload(ctx,{name:file.name,buffer})
         ctx.body = {result};
     }
