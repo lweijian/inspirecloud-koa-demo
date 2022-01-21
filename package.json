@@ -8,6 +8,7 @@
   ],
   "dependencies": {
     "@byteinspire/api": "^1.0.12",
+    "@koa/multer": "^3.0.0",
     "@koa/router": "^8.0.2",
     "axios": "^0.25.0",
     "koa": "^2.11.0",
