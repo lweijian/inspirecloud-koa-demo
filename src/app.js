@@ -9,14 +9,7 @@ const app = new Koa();
 // 静态文件中间件
 app.use(koaStatic(path.join(__dirname, '../public')));
 // 请求体 parse 中间件，用于 parse json 格式请求体
-app.use(koaBody(
-    {
-        multipart: true,
-        formidable: {
-            maxFileSize: 200 * 1024 * 1024
-        }
-    }
-));
+app.use(koaBody());
 
 /** 若后面的路由抛错，则封装为错误响应返回
  * 错误响应格式为
